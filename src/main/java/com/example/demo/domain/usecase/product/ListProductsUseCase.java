@@ -10,13 +10,11 @@ import java.util.stream.Collectors;
 
 @AllArgsConstructor
 public class ListProductsUseCase {
-
     private ModelMapper modelMapper;
-
-
-private ProductRepository productRepository;
-
-public List<Product> listProducts(){ return productRepository.getProducts().stream().map(item -> {
-    return modelMapper.map(item, Product.class);
-}).collect(Collectors.toList()); }
+    private ProductRepository productRepository;
+    public List<Product> listProducts() {
+        return productRepository.getProducts().stream().map(item -> {
+            return modelMapper.map(item, Product.class);
+        }).collect(Collectors.toList());
+    }
 }

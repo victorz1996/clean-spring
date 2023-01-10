@@ -13,8 +13,8 @@ public class JpaProductImpl implements ProductRepository {
     private JpaProductRepository jpaProductRepository;
 
     @Override
-    public ProductEntity createProduct(Product product) {
-        return null;
+    public ProductEntity createProduct(ProductEntity product) {
+        return jpaProductRepository.save(product);
     }
 
     @Override

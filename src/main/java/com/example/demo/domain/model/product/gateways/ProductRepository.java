@@ -6,7 +6,7 @@ import com.example.demo.infrastucture.drivenAdapters.product.ProductEntity;
 import java.util.List;
 
 public interface ProductRepository {
-    ProductEntity createProduct(Product product);
+    ProductEntity createProduct(ProductEntity product);
     List<ProductEntity> getProducts();
     ProductEntity getProduct(Long productId);
 
