@@ -1,9 +1,6 @@
-package com.example.demo.infrastucture.drivenAdapters.product;
+package com.example.demo.infrastructure.drivenAdapters.product;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ProductEntityTest {
 

@@ -1,5 +1,6 @@
 package com.example.demo.domain.model.product;
 
+import com.example.demo.domain.model.category.Category;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,25 +10,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ProductTest {
     Product product;
+    Category category;
     @BeforeEach
     void setup(){
         Product productNoArgs = new Product();
-        this.product = new Product(2L, "name" , "category", 5, 12.0);
+        Category category = new Category(1,"Nueva categoria", true);
+        this.product = new Product(2, "name" , 1, 5, 12.0, true, category);
     }
     @Test
     void getId() {
-        Assertions.assertEquals(2L, this.product.getId());
+        Assertions.assertEquals(2, this.product.getId());
     }
 
     @Test
     void getName() {
         Assertions.assertEquals("name", this.product.getName());
-    }
-
-    @Test
-    void getCategory() {
-        Assertions.assertEquals("category", this.product.getCategory());
-
     }
 
     @Test
@@ -42,8 +39,8 @@ class ProductTest {
 
     @Test
     void setId() {
-        this.product.setId(3L);
-        Assertions.assertEquals(3L,this.product.getId());
+        this.product.setId(3);
+        Assertions.assertEquals(3,this.product.getId());
     }
 
     @Test
@@ -52,11 +49,7 @@ class ProductTest {
         Assertions.assertEquals("Nuevo",this.product.getName());
     }
 
-    @Test
-    void setCategory() {
-        this.product.setCategory("Categoria nueva");
-        Assertions.assertEquals("Categoria nueva",this.product.getCategory());
-    }
+
 
     @Test
     void setStock() {

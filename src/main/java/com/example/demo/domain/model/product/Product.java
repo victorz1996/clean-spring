@@ -1,18 +1,19 @@
 package com.example.demo.domain.model.product;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.demo.domain.model.category.Category;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 public class Product {
-    private Long id;
+    private Integer id;
     private String name;
-    private String category;
+    private Integer categoryId;
     private Integer stock;
     private Double price;
+    private Boolean status;
+    private Category category;
 }

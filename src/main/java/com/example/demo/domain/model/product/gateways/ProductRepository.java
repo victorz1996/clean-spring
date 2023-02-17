@@ -1,13 +1,13 @@
 package com.example.demo.domain.model.product.gateways;
 
 import com.example.demo.domain.model.product.Product;
-import com.example.demo.infrastucture.drivenAdapters.product.ProductEntity;
 
 import java.util.List;
 
 public interface ProductRepository {
-    ProductEntity createProduct(ProductEntity product);
-    List<ProductEntity> getProducts();
-    ProductEntity getProduct(Long productId);
+    Product saveProduct(Product product);
+    List<Product> getProducts();
+    Product getProduct(Integer productId);
+    void deleteProduct(Integer productId);
 
 }

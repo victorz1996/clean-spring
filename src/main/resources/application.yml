@@ -1,0 +1,6 @@
+server:
+  servlet:
+    context-path: /market/api
+spring:
+  profiles:
+    active: dev
